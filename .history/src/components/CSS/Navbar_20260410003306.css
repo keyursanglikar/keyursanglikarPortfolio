@@ -771,13 +771,6 @@ Mobile First Approach:
     padding: 7px 16px;
     font-size: 9.5px;
   }
-
-  .nav-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
    .nav-status{
       display:flex ;
       justify-content: center;

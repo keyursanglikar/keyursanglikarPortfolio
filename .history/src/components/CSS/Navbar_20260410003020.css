@@ -622,12 +622,7 @@ Mobile First Approach:
      text-align: center;
      width: 100%;
   }
-  .nav-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  .n
   
 }
 
@@ -677,12 +672,6 @@ Mobile First Approach:
       justify-content: center;
      text-align: center;
      width: 100%;
-  }
-  .nav-btn{
- display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
   
 }
@@ -735,13 +724,6 @@ Mobile First Approach:
      text-align: center;
      width: 100%;
   }
-
-  .nav-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
 }
 
 
@@ -770,13 +752,6 @@ Mobile First Approach:
   .nav-btn {
     padding: 7px 16px;
     font-size: 9.5px;
-  }
-
-  .nav-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
   }
    .nav-status{
       display:flex ;
