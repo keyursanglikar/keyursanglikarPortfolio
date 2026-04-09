@@ -1,0 +1,42 @@
+/* Import a modern developer-style font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  background-color: rgb(4, 0, 12);
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'JetBrains Mono', monospace;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+ 
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-primary: rgb(4, 0, 12);
+  --bg-secondary: #0a0a23;
+  --bg-card: #111132;
+
+  --accent-primary: #6c63ff;
+  --accent-secondary: #00f5ff;
+  --accent-gradient: linear-gradient(90deg, #6c63ff, #00f5ff);
+
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --text-muted: #6b6b8a;
+
+  --border-color: #1f1f3a;
+}

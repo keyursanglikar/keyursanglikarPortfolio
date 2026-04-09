@@ -1,0 +1,117 @@
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --accent: #38bdf8;
+  --text: #f8fafc;
+}
+
+.playground-root {
+  display: flex;
+  height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background: var(--panel);
+  border-right: 1px solid #334155;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar h3 { font-size: 1.2rem; color: var(--accent); }
+
+.sidebar select {
+  background: #0f172a;
+  color: white;
+  padding: 8px;
+  border: 1px solid #475569;
+  border-radius: 5px;
+}
+
+.template-list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.template-list button {
+  text-align: left;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.template-list button:hover {
+  background: #334155;
+  color: white;
+}
+
+/* Main Editor Area */
+.editor-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  background: #111827;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tabs button {
+  background: #334155;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabs button.active { background: var(--accent); color: #000; font-weight: bold; }
+
+.mode-toggle { margin-left: auto; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; }
+
+.edit-area {
+  flex: 1;
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #d1d5db;
+  font-family: 'Consolas', monospace;
+  font-size: 14px;
+  padding: 15px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+/* Preview Window */
+.preview {
+  height: 40%;
+  background: white;
+  border-top: 4px solid var(--accent);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}

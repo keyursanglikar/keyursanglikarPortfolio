@@ -1,0 +1,425 @@
+/* ═══════════════════════════════════════════════════════════
+   CodePlayground.css  —  Keyur Sanglikar Portfolio
+   Tech stack: HTML · CSS · JavaScript · React
+   Matches Hero.css design system (--bg #060d1a, --accent #38bdf8)
+═══════════════════════════════════════════════════════════ */
+
+/* ── Variables ──────────────────────────────────────────── */
+.pg-section {
+  --bg:         #060d1a;
+  --surface:    #07101f;
+  --border:     #0f2744;
+  --accent:     #38bdf8;
+  --accent-dim: #38bdf812;
+  --accent-mid: #38bdf830;
+  --green:      #34d399;
+  --text-1:     #e2e8f0;
+  --text-2:     #8a96a8;
+  --text-3:     #3a4a60;
+  --radius:     12px;
+  --font-mono:  'Space Mono', 'Courier New', monospace;
+}
+
+/* ── Wrapper ─────────────────────────────────────────────── */
+.pg-section {
+  background: var(--bg);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  overflow: hidden;
+  font-family: var(--font-mono);
+  width: 100%;
+}
+
+/* ── Top bar ─────────────────────────────────────────────── */
+.pg-topbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.pg-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.pg-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.pg-dot-r { background: #ff5f57; }
+.pg-dot-y { background: #febc2e; }
+.pg-dot-g { background: #28c840; }
+
+.pg-title {
+  flex: 1;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+
+.pg-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.pg-autorun-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  user-select: none;
+}
+.pg-autorun-label input {
+  accent-color: var(--accent);
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────── */
+.pg-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.pg-toolbar-left,
+.pg-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Dropdowns */
+.pg-select {
+  background: var(--bg);
+  color: var(--text-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%233a4a60'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  padding-right: 26px;
+}
+.pg-select:hover,
+.pg-select:focus {
+  border-color: var(--accent-mid);
+  color: var(--accent);
+}
+.pg-select-template { min-width: 180px; }
+
+/* Small icon/text buttons */
+.pg-icon-btn {
+  background: transparent;
+  color: var(--text-3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 11px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.pg-icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent-mid);
+}
+
+.pg-fontsize-label {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+}
+
+/* Run button */
+.pg-run-btn {
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+.pg-run-btn:hover {
+  background: #7dd3f8;
+  transform: scale(1.04);
+}
+.pg-run-btn:active {
+  transform: scale(0.97);
+}
+
+/* ── Mobile tabs ─────────────────────────────────────────── */
+.pg-mobile-tabs {
+  display: none;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.pg-mobile-tab {
+  flex: 1;
+  padding: 9px 0;
+  background: transparent;
+  color: var(--text-3);
+  border: none;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.pg-mobile-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Body (editor + preview) ─────────────────────────────── */
+.pg-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 460px;
+}
+
+/* ── Editor pane ─────────────────────────────────────────── */
+.pg-editor-pane {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.pg-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.pg-lang-badge {
+  font-size: 10px;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-mid);
+  border-radius: 20px;
+  padding: 2px 10px;
+  letter-spacing: 1.5px;
+}
+
+.pg-line-info {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+}
+
+.pg-editor-row {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.pg-line-nums {
+  padding: 14px 10px;
+  background: var(--bg);
+  color: var(--border);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: right;
+  user-select: none;
+  white-space: pre;
+  flex-shrink: 0;
+  min-width: 36px;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+  font-family: var(--font-mono);
+}
+
+.pg-textarea {
+  flex: 1;
+  resize: none;
+  background: var(--bg);
+  color: var(--text-1);
+  border: none;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  line-height: 1.6;
+  outline: none;
+  tab-size: 2;
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre;
+}
+.pg-textarea::selection {
+  background: var(--accent-mid);
+}
+.pg-textarea::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.pg-textarea::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+.pg-textarea::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+/* ── Preview pane ────────────────────────────────────────── */
+.pg-preview-pane {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pg-preview-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.pg-preview-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pg-pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pg-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.pg-preview-label {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.pg-iframe {
+  flex: 1;
+  border: none;
+  background: white;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+.pg-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.pg-prompt {
+  color: var(--green);
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.pg-footer-slogan {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+}
+.pg-footer-slogan span {
+  color: var(--accent);
+}
+
+.pg-footer-right {
+  font-size: 10px;
+  color: var(--text-3);
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+/* ── Utilities ───────────────────────────────────────────── */
+.pg-hidden-mobile { display: flex; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pg-body {
+    grid-template-columns: 1fr;
+    height: 420px;
+  }
+  .pg-mobile-tabs {
+    display: flex;
+  }
+  .pg-hidden-mobile {
+    display: none !important;
+  }
+  .pg-select-template {
+    min-width: 140px;
+  }
+  .pg-title {
+    display: none;
+  }
+  .pg-toolbar {
+    gap: 6px;
+  }
+  .pg-toolbar-right {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pg-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pg-toolbar-left,
+  .pg-toolbar-right {
+    justify-content: center;
+  }
+  .pg-fontsize-label {
+    display: none;
+  }
+  .pg-footer-right {
+    display: none;
+  }
+}
